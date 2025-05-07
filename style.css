@@ -17,7 +17,7 @@ body {
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('media/cat.webp'); 
+    background-image: url('cat.webp'); 
     background-repeat: repeat;
     background-size: 100px 100px;
     z-index: -1;
