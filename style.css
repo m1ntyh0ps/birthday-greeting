@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Background layer with repeating cat gif */
+  .background-layer {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('media/cat.webp'); 
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    z-index: -1;
+    opacity: 0.4; /* adjust for less distraction */
+  }
+  
+  /* Centered content */
+  .main-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2em;
+    border-radius: 20px;
+    max-width: 500px;
+  }
+  
+  .message-box {
+    margin-top: 2em;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker, solid background with high opacity */
+    border: 1px solid white;
+    border-radius: 10px;
+    display: none;
+    color: white; /* Make text visible */
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 600px) {
+    .message-box {
+      max-height: 50vh;  /* smaller height for phones */
+      font-size: 1rem;
+    }
+  }
+  
+  
+  /* Cute button styling */
+  button {
+    background-color: #ff90c2;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect: Grow and Change Color */
+  button:hover {
+    transform: scale(1.1); /* Button grows slightly */
+    background-color: #ff61a6; /* Slightly darker shade on hover */
+    box-shadow: 0 0 10px rgba(255, 144, 194, 0.8); /* Soft glowing effect */
+  }
+  
+  /* Click Animation: Bounce when clicked */
+  button:active {
+    transform: scale(0.95); /* Shrinks the button when clicked */
+    animation: bounce 0.3s ease-out; /* Bounce animation */
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

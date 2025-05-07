@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!-- Background Layer -->
+  <div class="background-layer"></div>
+
+  <!-- Greeting Content -->
+  <div class="main-content">
+    <h1>🎉 Happy Birthday, Aley!!! 🎂</h1>
+    <p>You’re an amazing person and you deserve a whole website 🐱💖</p>
+    <button id="openButton">Open Your Surprise</button>
+    
+    <!-- Hidden message box -->
+    <div class="message-box" id="messageBox">
+      <p> Heiii, Aleybear, my little insufferable demon. I don't really know what to say in a birthday message, but, I just wanna say that maybe this day 
+        is just another day for you, cake and drinking and stuff. But for me, it's kind of a special day, because it's the day you were 
+        born, and it led to us meeting and forging this strange little bond with such a small chance. Both of us vibed, loved, admired 
+        and were obsessed with each other in just a short span of time and of course, I'm still kinda sad how it turned out even 
+        though we're still gonna be friends and for many years more. Aley, I loved you and I adored you. I was patient and I was 
+        understanding, but, ending that deeper kind of relationship changed things. I'm still reeling from the sudden change of 
+        direction but, yeah, I hope you'd do well in the future. I mean, I'll still be here with you. For me, despite 
+        how damaged and broken you are, you're still a gentle and beautiful soul. I also grieve for the things that what could've been for 
+        us, all the hopes and dreams. But, I'll be fine. And I hope that we'll find our way through life without having to face a 
+        lot of bad consequences. I'll be here for you, if things get real messy and hopefully, you'd be there for me as well. 
+         Who knows that the future holds for both of us. A lot of unexpected things, for sure. 
+         And yeah, Happy Birthday, my babygorilla. 
+
+        Love you lots. Love you still. Love you the same. Until it ends.
+        
+        Enjoy your day♥️</p>
+    </div>
+  </div>
+
+  <script>
+    const openButton = document.getElementById('openButton');
+    const messageBox = document.getElementById('messageBox');
+
+    openButton.addEventListener('click', () => {
+      // Show the surprise message
+      messageBox.style.display = 'block';
+      
+      // Trigger confetti effect
+      confetti({
+        spread: 360,
+        angle: 90,
+        particleCount: 200,
+        origin: { x: 0.5, y: 0.5 }
+      });
+    });
+  </script>
+</body>
+</html>
